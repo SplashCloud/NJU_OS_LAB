@@ -1,0 +1,8 @@
+When working with prepared statements, consult the documentation to determine whether or not the statement's placeholders must be quoted. The most popular APIs available in PHP, PDO and MySQLi, expect unquoted placeholders, as do most prepared statement APIs in other languages:
+
+
+(There are good answers above regarding the SQL nature of your question, but this may also be relevant if you are new to PHP.)
+
+Perhaps it is important to mention that PHP handles single and double quoted strings differently...
+
+Single-quoted strings are 'literals' and are pretty much WYSIWYG strings. Double-quoted strings are interpreted by PHP for possible variable-substitution (backticks in PHP are not exactly strings; they execute a command in the shell and return the result).
